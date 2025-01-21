@@ -1,0 +1,37 @@
+
+train_path: '/home/omnisky/zhan/backdoor-baseline/My_StegaStamp/benign_section_content'
+logs_path: "./logs/"
+checkpoints_path: './checkpoints/'
+saved_models: './saved_models'
+
+cuda: True
+
+exp_name: 2
+secret_size: 100
+trigger_size: 2048
+num_steps: 200000
+batch_size: 4
+lr: 0.0001
+l2_loss_scale: 1
+l2_loss_ramp: 15000
+l2_edge_gain: 10
+l2_edge_ramp: 10000
+l2_edge_delay: 80000
+
+secret_loss_scale: 10
+secret_loss_ramp: 1
+G_loss_scale: 0.5
+G_loss_ramp: 15000
+
+diff_scale: 1
+no_gan: True
+
+rnd_noise: 0.05
+rnd_trans: 0.1
+rnd_trans_ramp: 10000
+
+rnd_noise_ramp: 100
+
+
+no_im_loss_steps: 5000
+pretrained: None
