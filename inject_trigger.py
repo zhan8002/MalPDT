@@ -173,7 +173,7 @@ def inject_Shift_trigger(args, sample, label, sample_idx, poison_correct):
                     p_sample[idx] = sample[idx]
                 else:
 
-                    first_content_offset = liefpe.dos_header.addressof_new_exeheader
+                    first_content_offset = liefpe.sections[0].offset
 
                     extension_amount = int(
                         math.ceil(len(trigger) / section_file_alignment)) * section_file_alignment
